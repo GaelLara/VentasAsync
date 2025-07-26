@@ -28,18 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            BtnGuardarVenta = new Button();
             SuspendLayout();
+            // 
+            // BtnGuardarVenta
+            // 
+            BtnGuardarVenta.Location = new Point(70, 59);
+            BtnGuardarVenta.Name = "BtnGuardarVenta";
+            BtnGuardarVenta.Size = new Size(129, 23);
+            BtnGuardarVenta.TabIndex = 0;
+            BtnGuardarVenta.Text = "Guardar venta";
+            BtnGuardarVenta.UseVisualStyleBackColor = true;
+            BtnGuardarVenta.Click += BtnGuardarVenta_Click;
             // 
             // FrmVentas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BtnGuardarVenta);
             Name = "FrmVentas";
             Text = "FrmVentas";
             ResumeLayout(false);
         }
 
         #endregion
+
+        private Button BtnGuardarVenta;
     }
 }

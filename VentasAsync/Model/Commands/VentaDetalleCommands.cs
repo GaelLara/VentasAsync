@@ -31,7 +31,7 @@ namespace VentasAsync.Model.Commands
         {
             try
             {
-                string query = "INSERT INTO VentasDetalle " +
+                string query = "INSERT INTO VentaDetalle " +
                     "(VentaId, Renglon, ProductoId, Cantidad, ValorUnitario, Descripcion, Importe) " +
                                "VALUES " +
                     "(@VentaId, @Renglon, @ProductoId, @Cantidad, @ValorUnitario, @Descripcion, @Importe);";
