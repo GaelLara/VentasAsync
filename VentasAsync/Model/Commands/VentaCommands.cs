@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using VentasAsync.Model.DataBase;
 using VentasAsync.Model.Entities;
 
@@ -78,13 +73,13 @@ namespace VentasAsync.Model.Commands
                 throw;
             }
         }
-        public async Task SaveVentaAsync(Venta venta) 
+        public async Task SaveVentaAsync(Venta venta)
         {
             try
             {
                 int ventaId = await AddVentaAsync(venta);
 
-                foreach(var concepto in venta.Conceptos)
+                foreach (var concepto in venta.Conceptos)
                 {
                     VentaDetalleCommands detalleCommands = new VentaDetalleCommands();
                     await detalleCommands.AddVentaDetalleAsync(concepto, ventaId);
